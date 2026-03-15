@@ -1,9 +1,9 @@
 manifestVersion: 1
 id: fixedcoin
+category: bitcoin
 name: FixedCoin
 tagline: FixedCoin (FIX) Node - Cryptocurrency wallet and full node
 icon: https://raw.githubusercontent.com/DE11469/fixedcoin-node-umbrel/master/icon.png
-category: bitcoin
 version: 1.0.0.1
 port: 8080
 description: >-
@@ -11,10 +11,11 @@ description: >-
   This app includes a full FixedCoin node and wallet functionality.
 developer: FixedCoin Community
 website: https://fixedcoin.org
-repo: https://github.com/DE11469/fixedcoin-node-umbrel
-support: https://github.com/DE11469/fixedcoin-node-umbrel/issues
 submitter: DE11469
 submission: https://github.com/DE11469/umbrel-community-app-store-
+repo: https://github.com/DE11469/fixedcoin-node-umbrel
+support: https://github.com/DE11469/fixedcoin-node-umbrel/issues
+gallery: []
 releaseNotes: >-
   - Initial release of FixedCoin Node for Umbrel
   - Full node and wallet functionality
@@ -22,15 +23,4 @@ dependencies: []
 path: ""
 defaultUsername: ""
 defaultPassword: ""
-formFields:
-  - type: "password"
-    id: "rpcPassword"
-    label: "RPC Password"
-    description: "Set a secure password for RPC access"
-    defaultValue: "changeme"
-  - type: "password"
-    id: "walletPassword"
-    label: "Wallet Password"
-    description: "Set a password to encrypt your wallet (optional)"
-    optional: true
-    defaultValue: ""
+toronly: false
