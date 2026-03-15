@@ -2,8 +2,7 @@ version: "3.8"
 
 services:
   app_proxy:
-    image: getumbrel/app-proxy:v0.1.0
-    container_name: fixedcoin_app_proxy
+    image: getumbrel/app-proxy:v1.0.0
     restart: on-failure
     ports:
       - "${APP_FIXEDCOIN_PORT:-8080}:8080"
@@ -15,8 +14,7 @@ services:
       - fixedcoin_node
 
   fixedcoin_node:
-    build: .
-    container_name: fixedcoin_node
+    image: ubuntu:22.04
     restart: on-failure
     ports:
       - "24768:24768"
@@ -24,15 +22,6 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data:/data
     environment:
-      - RPC_USER=umbrel
-      - RPC_PASSWORD=changeme
-    networks:
-      fixedcoin_network:
-        ipv4_address: 172.16.0.10
-
-networks:
-  fixedcoin_network:
-    driver: bridge
-    ipam:
-      config:
-        - subnet: 172.16.0.0/24
+      RPC_USER: umbrel
+      RPC_PASSWORD: changeme
+    command: tail -f /dev/null
