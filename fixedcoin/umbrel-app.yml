@@ -3,7 +3,7 @@ id: fixedcoin
 category: bitcoin
 name: FixedCoin
 tagline: FixedCoin (FIX) Node - Cryptocurrency wallet and full node
-icon: https://raw.githubusercontent.com/DE11469/fixedcoin-node-umbrel/master/icon.png
+icon: https://raw.githubusercontent.com/DE11469/fixedcoin-node-umbrel/main/icon.png
 version: "1.0.0.1"
 port: 8080
 description: >-
@@ -19,8 +19,30 @@ gallery: []
 releaseNotes: >-
   - Initial release of FixedCoin Node for Umbrel
   - Full node and wallet functionality
+  - Solo mining support
 dependencies: []
 path: ""
 defaultUsername: ""
 defaultPassword: ""
 toronly: false
+formFields:
+  - type: "string"
+    id: "rpcUser"
+    label: "RPC Username"
+    description: "Username for RPC access"
+    defaultValue: "umbrel"
+  - type: "password"
+    id: "rpcPassword"
+    label: "RPC Password"
+    description: "Password for RPC access"
+    defaultValue: ""
+  - type: "checkbox"
+    id: "miningEnabled"
+    label: "Enable Solo Mining"
+    description: "Enable solo mining on your node"
+    defaultValue: false
+  - type: "string"
+    id: "miningRewardAddress"
+    label: "Mining Reward Address"
+    description: "Your FixedCoin wallet address for mining rewards (leave empty to use node wallet)"
+    defaultValue: ""
