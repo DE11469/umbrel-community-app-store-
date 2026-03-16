@@ -10,3 +10,8 @@ services:
   fixedcoin_node:
     build: .
     init: true
+    volumes:
+      - ${APP_DATA_DIR}/data:/data
+    environment:
+      RPC_USER: umbrel
+      RPC_PASSWORD: changeme
