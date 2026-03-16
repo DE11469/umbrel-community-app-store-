@@ -8,5 +8,5 @@ services:
       APP_PORT: 8080
 
   fixedcoin_node:
-    image: ubuntu:22.04
+    build: .
     init: true
