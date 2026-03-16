@@ -8,10 +8,8 @@ services:
       APP_PORT: 8080
 
   fixedcoin_node:
-    build: .
+    image: alpine:latest
     init: true
     volumes:
       - ${APP_DATA_DIR}/data:/data
-    environment:
-      RPC_USER: umbrel
-      RPC_PASSWORD: changeme
+    command: ["sleep", "infinity"]
