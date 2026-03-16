@@ -1,27 +1,12 @@
-version: "3.8"
+version: "3.7"
 
 services:
+
   app_proxy:
-    image: getumbrel/app-proxy:v1.0.0
-    restart: on-failure
-    ports:
-      - "${APP_FIXEDCOIN_PORT:-8080}:8080"
     environment:
-      APP_HOST: fixedcoin_node
+      APP_HOST: fixedcoin_fixedcoin_node_1
       APP_PORT: 8080
-      PROXY_AUTH_ADD: "false"
-    depends_on:
-      - fixedcoin_node
 
   fixedcoin_node:
     image: ubuntu:22.04
-    restart: on-failure
-    ports:
-      - "24768:24768"
-      - "24761:24761"
-    volumes:
-      - ${APP_DATA_DIR}/data:/data
-    environment:
-      RPC_USER: umbrel
-      RPC_PASSWORD: changeme
-    command: tail -f /dev/null
+    init: true
