@@ -4,12 +4,11 @@ services:
 
   app_proxy:
     environment:
-      APP_HOST: fixedcoin_fixedcoin_node_1
+      APP_HOST: fixedcoin_server_1
       APP_PORT: 80
 
-  fixedcoin_node:
+  server:
     image: nginx:alpine
     init: true
     volumes:
       - ${APP_DATA_DIR}/data:/data
-      - ./www:/usr/share/nginx/html:ro
