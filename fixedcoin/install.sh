@@ -2,8 +2,6 @@
 
 # FixedCoin Umbrel App Installation Script
 
-echo "Installing FixedCoin..."
-
 # Create the app data directory
 mkdir -p /home/umbrel/umbrel/app-data/fixedcoin/data
 
@@ -22,7 +20,7 @@ maxconnections=16
 EOF
 
 # Set proper permissions
-chmod 600 /home/umbrel/umbrel/app-data/fixedcoin/data/fixedcoin.conf
-chmod -R 700 /home/umbrel/umbrel/app-data/fixedcoin/data/
+chmod 600 /home/umbrel/umbrel/app-data/fixedcoin/data/fixedcoin.conf 2>/dev/null
+chmod -R 700 /home/umbrel/umbrel/app-data/fixedcoin/data/ 2>/dev/null
 
-echo "FixedCoin configuration created!"
+exit 0
