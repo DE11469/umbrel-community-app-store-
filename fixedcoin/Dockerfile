@@ -1,10 +1,10 @@
-FROM nginx:alpine
+FROM php:8.2-fpm-alpine
 
 # Copy web UI files
-COPY www/ /usr/share/nginx/html/
+COPY www/ /var/www/html/
 
 # Copy icon
-COPY www/icon.png /usr/share/nginx/html/ 2>/dev/null || true
+COPY www/icon.png /var/www/html/ 2>/dev/null || true
 
 # Expose port
-EXPOSE 80
+EXPOSE 9000
