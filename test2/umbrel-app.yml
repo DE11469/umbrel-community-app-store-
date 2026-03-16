@@ -1,0 +1,18 @@
+manifestVersion: 1
+id: hello-umbrel
+name: Hello Umbrel
+tagline: A simple hello world app
+icon: https://raw.githubusercontent.com/DE11469/umbrel-community-app-store-/master/fixedcoin/icon.png
+version: "1.0"
+port: 3333
+category: Education
+description: >-
+  A simple test app for Umbrel.
+developer: Test
+website: https://example.com
+repo: https://example.com
+support: https://example.com
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
