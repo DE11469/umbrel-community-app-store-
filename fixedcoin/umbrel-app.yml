@@ -5,6 +5,7 @@ tagline: FixedCoin (FIX) Node - Cryptocurrency wallet and full node
 icon: https://raw.githubusercontent.com/DE11469/umbrel-community-app-store-/master/fixedcoin/icon.png
 version: "1.0.0.1"
 port: 8080
+path: "fixedcoin"
 category: finance
 description: >-
   Run your own FixedCoin (FIX) node on Umbrel. FixedCoin is a decentralized cryptocurrency.
